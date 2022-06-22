@@ -1,6 +1,6 @@
-import { GetAllImplementations } from "../implementations/getAllImplementations";
-import { GetAllUseCase } from "../useCases/getAll";
-import { getAllControler } from "../controllers/getAllControler";
+import { getAllControler } from '../controllers/getAllControler';
+import { GetAllImplementations } from '../implementations/getAllImplementations';
+import { GetAllUseCase } from '../useCases/getAll';
 
 const implementations = new GetAllImplementations();
 

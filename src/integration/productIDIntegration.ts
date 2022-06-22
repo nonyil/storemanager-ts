@@ -1,6 +1,6 @@
-import { ProductByIDImplementation } from "../implementations/productsIDImplemetation";
-import { GetProductIdCase } from "../useCases/getProductsById";
-import { ProductsByIdControler } from "../controllers/productsByIdControler";
+import { ProductsByIdControler } from '../controllers/productsByIdControler';
+import { ProductByIDImplementation } from '../implementations/productsIDImplemetation';
+import { GetProductIdCase } from '../useCases/getProductsById';
 
 const implementation = new ProductByIDImplementation();
 
