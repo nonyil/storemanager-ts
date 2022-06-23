@@ -1,6 +1,6 @@
-import { AllSalesImplementation } from "../implementations/AllSalesImplementation";
-import { GetAllSales } from "../useCases/getAllSales";
-import { getAllSalesControler } from "../controllers/getAllSalesControler";
+import { getAllSalesControler } from '../controllers/getAllSalesControler';
+import { AllSalesImplementation } from '../implementations/AllSalesImplementation';
+import { GetAllSales } from '../useCases/getAllSales';
 
 const implementations = new AllSalesImplementation();
 
