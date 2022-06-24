@@ -1,9 +1,10 @@
-import { ResultSetHeader } from 'mysql2';
+import { ResultSetHeader, RowDataPacket } from 'mysql2';
 
 import { ICreateTsSales } from '../entities/ISalesRegister';
 import { IRequestTsSales } from '../entities/ISalesResponse';
 import connection from '../helpers/conection';
 import { ICreateSales } from '../repositories/createSales';
+import { CustomError } from '../utils/CustomError';
 
 export class ImplementationGetAllSales implements ICreateSales {
   async insertSingleSale(sales: ICreateTsSales, id: number): Promise<void> {
@@ -26,6 +27,7 @@ export class ImplementationGetAllSales implements ICreateSales {
   }
 
   async createSales(sales: ICreateTsSales[]): Promise<IRequestTsSales> {
+    await this.checkValidation(sales);
     const insertionSalesQuery =
       'INSERT INTO StoreManager.sales (date) VALUES (CURRENT_TIMESTAMP())';
     const [{ insertId }] = await connection.execute<ResultSetHeader>(insertionSalesQuery);
@@ -35,5 +37,18 @@ export class ImplementationGetAllSales implements ICreateSales {
       itemsSold: [...sales],
     };
     return ACABO as IRequestTsSales;
+  }
+
+  private async checkValidation(sales: ICreateTsSales[]) {
+    interface IQuantity extends RowDataPacket {
+      quantity: number;
+    }
+
+    const err = sales.some(async (sale: ICreateTsSales) => {
+      const query = 'SELECT quantity FROM StoreManager.products WHERE id = ?';
+      const [result] = await connection.execute<IQuantity[]>(query, [sale.productId]);
+      return result[0].quantity - sale.quantity < 0;
+    });
+    if (err) throw new CustomError(422, 'Such amount is not permitted to sell');
   }
 }

@@ -1,5 +1,6 @@
 import express, { Router } from 'express';
 import GetAllSalesControler from '../integration/allSalesIntegration';
+import delSalesController from '../integration/deleteSalesIntegration';
 import SalesController from '../integration/integrationSales';
 import salesByIdControler from '../integration/salesIDIntegration';
 import updateSalesController from '../integration/updateSalesIntegration';
@@ -20,6 +21,10 @@ routeSales.post('/sales/', (request, response) => {
 
 routeSales.put('/sales/:id', (request, response) => {
   return updateSalesController.handle(request, response);
+});
+
+routeSales.delete('/sales/:id', (request, response) => {
+  return delSalesController.handle(request, response);
 });
 
 export default routeSales;
