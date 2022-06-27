@@ -40,15 +40,14 @@ export class ImplementationGetAllSales implements ICreateSales {
   }
 
   private async checkValidation(sales: ICreateTsSales[]) {
-    interface IQuantity extends RowDataPacket {
-      quantity: number;
-    }
-
-    const err = sales.some(async (sale: ICreateTsSales) => {
+    const err = sales.map(async (sale: ICreateTsSales) => {
       const query = 'SELECT quantity FROM StoreManager.products WHERE id = ?';
-      const [result] = await connection.execute<IQuantity[]>(query, [sale.productId]);
-      return result[0].quantity - sale.quantity < 0;
+      const [result] = await connection.execute<RowDataPacket[]>(query, [sale.productId]);
+      return sale.quantity - result[0].quantity < 0;
     });
-    if (err) throw new CustomError(422, 'Such amount is not permitted to sell');
+
+    const resArray = await Promise.all(err);
+    const shouldThrow = resArray.some(e => e === false);
+    if (shouldThrow) throw new CustomError(422, 'Such amount is not permitted to sell');
   }
 }
