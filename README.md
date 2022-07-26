@@ -1,18 +1,21 @@
-# storemanager-ts
+<h1>TypeScript</h1>
 
-.TypeScript
-.S.O.L.I.D.
-.MYSQL2
-.Realizar operações assíncronas utilizando callbacks;
-.Realizar operações assíncronas utilizando Promises;
-.Ler e escrever arquivos localmente com NodeJS;
-.Escrever seus próprios scripts que criam e consomem Promises;
-.Reescrever código que usa callbacks para que use Promises;
-.Realizar chamadas de funções de forma consciente;
-.Entender os conceitos básicos de como o JavaScript funciona;
-.Detectar e solucionar problemas no código de forma mais objetiva;
-.Entender a diferença entre execução síncrona e assíncrona;
-.Entender o que é o HTTP, o que é uma API e o que os dois têm a ver com o Express;
-.Escrever APIs utilizando Node e Express;
-.Entender a estrutura de uma aplicação Express e como organizar seu código;
-.Criar rotas e aplicar middlewares.
+> Concluído
+<ul>
+
+<li>S.O.L.I.D.</li>
+<li>MYSQL2</li>
+<li>Realizar operações assíncronas utilizando callbacks;</li>
+<li>Realizar operações assíncronas utilizando Promises;</li>
+<li>Ler e escrever arquivos localmente com NodeJS;</li>
+<li>Escrever seus próprios scripts que criam e consomem Promises;</li>
+<li>Reescrever código que usa callbacks para que use Promises;</li>
+<li>Realizar chamadas de funções de forma consciente;</li>
+<li>Entender os conceitos básicos de como o JavaScript funciona;</li>
+<li>Detectar e solucionar problemas no código de forma mais objetiva;</li>
+<li>Entender a diferença entre execução síncrona e assíncrona;</li>
+<li>Entender o que é o HTTP, o que é uma API e o que os dois têm a ver com o Express;</li>
+<li>Escrever APIs utilizando Node e Express;</li>
+<li>Entender a estrutura de uma aplicação Express e como organizar seu código;</li>
+<li>Criar rotas e aplicar middlewares.</li>
+</ul>
