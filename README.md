@@ -1,25 +1,79 @@
-<h1>TypeScript</h1>
+
 
 > Concluído
 
 Project developed studying in [Trybe](https://www.betrybe.com/)
-<ul>
+
+<h1>:computer: Store-manager</h1>
+<h1>TypeScript</h1>
+<div>
+  <h3>Sobre o projeto</h3>
+  <p>Esse é um projeto que simula uma API e um banco de dados para o gerenciamento de uma loja</p>
+</div>
+<div>
+  <h3>Ferramentas utilizadas</h3>
+  <ul>
+    <li><a href="https://nodejs.org/en/">Node.js<a/></li>
+    <li><a href="https://www.typescriptlang.org">Typescript<a/></li>
+    <li><a href="https://expressjs.com/">Express<a/></li>
+    <li><a href="https://www.npmjs.com/package/mysql">MYSQL</a></li>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/CRUD">CRUD</a></li>
+    <li><a href="https://medium.com/desenvolvendo-com-paixao/o-que-é-solid-o-guia-completo-para-você-entender-os-5-princípios-da-poo-2b937b3fc530">S.O.L.I.D</a></li>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Glossary/REST">REST</a></li>
+  </ul>
+</div>
+<div>
+  <h3>Orientações</h3>
+  <details>
+  <summary>:octocat: <strong>Clonando o repositório e instalando os node modules</strong></summary>
+    
+  1. Clone o repositório
+    
+  - `git clone git@github.com:nonyil/storemanager-ts.git`;
+
+  
+  2. Faça a instalação das dependências
+  
+  - `npm install` ou `npm i`;
+  </details>
+  <details>
+  <summary>:game_die: <strong>Configurando o conexão com o banco de dados</strong></summary>
+
+  1. Criando arquivo para a configuração
+  
+  - Copie o arquivo .env.example na na raiz do projeto e renomeio para:
+    - `.env`;
+    
+  - Coloque as seguintes informações nesse arquivo:
+    ```
+    #### SERVER VARS
+    NODE_ENV=development
+    API_PORT=3000
+    #### DATABASE VARS
+    MYSQL_HOST=localhost
+    MYSQL_PORT=3306
+    MYSQL_DB_NAME=blogs-api
+    MYSQL_USER=root
+    MYSQL_PASSWORD=1234
+    #### SECRECT VARS
+    JWT_SECRET=suaSenhaSecreta
+    ```
+  - Caso sua porta do API e do MySQL não seja a que estão descritas no arquivo .env, por favor altere para as que você usa, assim como o password do seu MySQL.
+   
+  2. Variáveis Ambiente
+  - Caso queria conhecer mais sobre variáveis ambiente, segue link sobre:
+    - https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/
+  </details>
+  <details>
+  <summary>:running: <strong>Rodando API localmente</strong></summary>
+  
+  - Rode o seguinte comando no terminal estando na raiz do projeto:
+  
+    - `npm start`;
+    
+  - Caso você queira foi configurado no package.json um scripts para rodar a aplicação de formas alternativas;
+  </details>
+  
 
 
-
-<li>S.O.L.I.D.</li>
-<li>MYSQL2</li>
-<li>Realizar operações assíncronas utilizando callbacks;</li>
-<li>Realizar operações assíncronas utilizando Promises;</li>
-<li>Ler e escrever arquivos localmente com NodeJS;</li>
-<li>Escrever seus próprios scripts que criam e consomem Promises;</li>
-<li>Reescrever código que usa callbacks para que use Promises;</li>
-<li>Realizar chamadas de funções de forma consciente;</li>
-<li>Entender os conceitos básicos de como o JavaScript funciona;</li>
-<li>Detectar e solucionar problemas no código de forma mais objetiva;</li>
-<li>Entender a diferença entre execução síncrona e assíncrona;</li>
-<li>Entender o que é o HTTP, o que é uma API e o que os dois têm a ver com o Express;</li>
-<li>Escrever APIs utilizando Node e Express;</li>
-<li>Entender a estrutura de uma aplicação Express e como organizar seu código;</li>
-<li>Criar rotas e aplicar middlewares.</li>
-</ul>
+#
