@@ -1,7 +1,11 @@
 <h1>TypeScript</h1>
 
 > Concluído
+
+Project developed studying in [Trybe](https://www.betrybe.com/)
 <ul>
+
+
 
 <li>S.O.L.I.D.</li>
 <li>MYSQL2</li>
